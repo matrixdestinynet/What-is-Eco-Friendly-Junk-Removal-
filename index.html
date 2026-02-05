@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Friendly Junk Removal | Triple G Redlands Recycling & Donation Process</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --gold-primary: #D4AF37;
+            --gold-secondary: #F4D03F;
+            --gold-light: #FFE87C;
+            --gold-dark: #B8860B;
+            --eco-green: #27AE60;
+            --earth-green: #2ECC71;
+            --dark-bg: #0a0a0a;
+            --card-bg: rgba(25, 25, 25, 0.92);
+            --text-light: #f5f5f5;
+            --text-muted: #aaa;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            background-image: 
+                radial-gradient(circle at 10% 15%, rgba(39, 174, 96, 0.08) 0%, transparent 25%),
+                radial-gradient(circle at 90% 85%, rgba(212, 175, 55, 0.08) 0%, transparent 25%),
+                repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(20, 20, 20, 0.1) 1px, rgba(20, 20, 20, 0.1) 3px);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            position: relative;
+        }
+        
+        .eco-badge {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--eco-green), var(--earth-green));
+            color: white;
+            font-weight: 700;
+            padding: 10px 30px;
+            border-radius: 50px;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(39, 174, 96, 0.3);
+            animation: badgePulse 3s infinite alternate;
+        }
+        
+        @keyframes badgePulse {
+            0% { box-shadow: 0 5px 20px rgba(39, 174, 96, 0.3); }
+            100% { box-shadow: 0 5px 30px rgba(39, 174, 96, 0.5); }
+        }
+        
+        .eco-badge i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--eco-green) 50%, var(--gold-primary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 5px 25px rgba(212, 175, 55, 0.2);
+            animation: titleShimmer 6s infinite linear;
+            background-size: 200% 200%;
+        }
+        
+        @keyframes titleShimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            max-width: 900px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+        
+        .gold-line {
+            height: 3px;
+            width: 400px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), var(--eco-green), var(--gold-primary), transparent);
+            margin: 30px auto;
+            border-radius: 3px;
+            opacity: 0.8;
+        }
+        
+        /* Service Cards */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 50px 0 70px;
+        }
+        
+        .service-card {
+            background: linear-gradient(145deg, rgba(30, 30, 30, 0.9), rgba(20, 20, 20, 0.9));
+            border-radius: 20px;
+            padding: 35px 30px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            border-color: var(--gold-primary);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--gold-primary), var(--eco-green));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s ease;
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-icon {
+            font-size: 3.5rem;
+            color: var(--gold-primary);
+            margin-bottom: 25px;
+            transition: all 0.5s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.2);
+        }
+        
+        .service-title {
+            font-size: 1.6rem;
+            color: var(--gold-light);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .service-desc {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Process Section */
+        .process-section {
+            margin: 80px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            color: var(--gold-light);
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        /* Process Steps */
+        .process-steps {
+            position: relative;
+            margin: 60px 0;
+        }
+        
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--gold-primary), var(--eco-green));
+            border-radius: 5px;
+            z-index: 1;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 80px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step:nth-child(odd) {
+            flex-direction: row;
+        }
+        
+        .step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .step-icon-container {
+            flex: 0 0 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .step-icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold-primary), var(--eco-green));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+            z-index: 3;
+            animation: stepFloat 4s ease-in-out infinite;
+        }
+        
+        @keyframes stepFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--dark-bg);
+            color: var(--gold-primary);
+            font-weight: 700;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--gold-primary);
+        }
+        
+        .step-content {
+            flex: 1;
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            margin: 0 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .step-title {
+            font-size: 1.8rem;
+            color: var(--gold-light);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .step-title i {
+            margin-right: 10px;
+            color: var(--eco-green);
+        }
+        
+        .step-desc {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        
+        .step-list {
+            padding-left: 20px;
+            margin-top: 20px;
+        }
+        
+        .step-list li {
+            margin-bottom: 10px;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .step-list li::before {
+            content: '✓';
+            color: var(--eco-green);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Partners Section */
+        .partners-section {
+            margin: 100px 0;
+        }
+        
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .partner-card {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(25, 25, 25, 0.9));
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+        
+        .partner-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--eco-green);
+            box-shadow: 0 15px 30px rgba(39, 174, 96, 0.2);
+        }
+        
+        .partner-icon {
+            font-size: 3rem;
+            color: var(--eco-green);
+            margin-bottom: 20px;
+        }
+        
+        .partner-name {
+            font-size: 1.5rem;
+            color: var(--gold-light);
+            margin-bottom: 15px;
+        }
+        
+        .partner-desc {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        /* Impact Section */
+        .impact-box {
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(25, 25, 25, 0.9));
+            border-radius: 20px;
+            padding: 50px;
+            margin: 70px 0;
+            border: 1px solid rgba(39, 174, 96, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .impact-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(39, 174, 96, 0.05) 0%, transparent 70%);
+            z-index: -1;
+        }
+        
+        .impact-icon {
+            font-size: 4rem;
+            color: var(--eco-green);
+            margin-bottom: 30px;
+            animation: spinSlow 20s linear infinite;
+        }
+        
+        @keyframes spinSlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .impact-title {
+            font-size: 2.2rem;
+            color: var(--gold-light);
+            margin-bottom: 25px;
+        }
+        
+        .impact-text {
+            color: var(--text-light);
+            line-height: 1.9;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+        
+        .impact-stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--gold-primary);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 80px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--text-muted);
+            position: relative;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0 40px;
+        }
+        
+        .footer-link {
+            color: var(--gold-light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .footer-link:hover {
+            color: var(--eco-green);
+            background: rgba(39, 174, 96, 0.1);
+            border-color: var(--eco-green);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(39, 174, 96, 0.1);
+        }
+        
+        .footer-link i {
+            margin-right: 10px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1100px) {
+            .process-steps::before {
+                left: 100px;
+            }
+            
+            .step {
+                flex-direction: row !important;
+                margin-left: 100px;
+            }
+            
+            .step-icon-container {
+                flex: 0 0 80px;
+                margin-right: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .service-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .process-steps::before {
+                left: 40px;
+            }
+            
+            .step {
+                margin-left: 40px;
+                flex-direction: column !important;
+            }
+            
+            .step-icon-container {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+            
+            .step-content {
+                margin: 0;
+            }
+            
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        
+        .process-section, .partners-section, .impact-box {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        /* Leaf Particles */
+        .leaf {
+            position: fixed;
+            background-color: var(--eco-green);
+            border-radius: 0 50% 0 50%;
+            opacity: 0.3;
+            z-index: -1;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="eco-badge">
+                <i class="fas fa-leaf"></i> Eco-Friendly Junk Removal
+            </div>
+            <h1>Triple G's Green Process</h1>
+            <div class="gold-line"></div>
+            <p class="subtitle">Discover how Triple G in Redlands transforms junk removal into an environmentally responsible process through careful sorting, local partnerships, and community donations. We're committed to keeping as much as possible out of landfills.</p>
+        </header>
+        
+        <div class="service-grid">
+            <div class="service-card" onclick="window.open('https://triplegredlands.com/', '_blank')">
+                <div class="service-icon">
+                    <i class="fas fa-trash-alt"></i>
+                </div>
+                <h3 class="service-title">Junk Removal near me</h3>
+                <p class="service-desc">Professional, eco-friendly junk removal services in Redlands and surrounding areas. We handle everything from residential cleanouts to commercial waste.</p>
+            </div>
+            
+            <div class="service-card" onclick="window.open('https://maps.app.goo.gl/BR8qGLyRwrhJPBvN6', '_blank')">
+                <div class="service-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3 class="service-title">GBM Location</h3>
+                <p class="service-desc">Find our Redlands location and service area. We proudly serve Redlands, San Bernardino, and the entire Inland Empire region.</p>
+            </div>
+            
+            <div class="service-card" onclick="window.open('https://docs.google.com/spreadsheets/d/1sGn64iRSjO4FnW6HeDcc5GSxuKp9IaqhFkEV1V9Jtow/edit?usp=sharing', '_blank')">
+                <div class="service-icon">
+                    <i class="fas fa-recycle"></i>
+                </div>
+                <h3 class="service-title">Request Indexing</h3>
+                <p class="service-desc">Submit your project details for a customized eco-friendly junk removal plan and transparent recycling report.</p>
+            </div>
+        </div>
+        
+        <section class="process-section" id="our-process">
+            <div class="section-header">
+                <h2 class="section-title">Our 5-Step Eco-Friendly Process</h2>
+                <p class="section-subtitle">Every Triple G junk removal project follows our meticulous process to maximize recycling and donation while minimizing landfill impact.</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-icon-container">
+                        <div class="step-icon-circle">
+                            <i class="fas fa-sort"></i>
+                        </div>
+                        <div class="step-number">1</div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title"><i class="fas fa-sort-amount-down"></i> On-Site Sorting</h3>
+                        <p class="step-desc">Our trained team carefully sorts all items directly at your location into three categories:</p>
+                        <ul class="step-list">
+                            <li><strong>Recyclables:</strong> Metals, plastics, glass, paper, and electronics</li>
+                            <li><strong>Donatables:</strong> Gently used furniture, appliances, clothing, and household items</li>
+                            <li><strong>Landfill-bound:</strong> Only items that cannot be recycled or donated</li>
+                        </ul>
+                        <p class="step-desc">This initial sorting ensures maximum diversion from landfills from the very beginning.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon-container">
+                        <div class="step-icon-circle">
+                            <i class="fas fa-truck-loading"></i>
+                        </div>
+                        <div class="step-number">2</div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title"><i class="fas fa-boxes"></i> Separate Transport</h3>
+                        <p class="step-desc">We load sorted items into separate containers on our specialized trucks:</p>
+                        <ul class="step-list">
+                            <li><strong>Designated compartments</strong> for different material types</li>
+                            <li><strong>Protective wrapping</strong> for delicate donatable items</li>
+                            <li><strong>Secure transportation</strong> to prevent contamination between categories</li>
+                            <li><strong>Direct routing</strong> to appropriate recycling centers and donation partners</li>
+                        </ul>
+                        <p class="step-desc">This separation preserves item quality and prevents recyclable contamination.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon-container">
+                        <div class="step-icon-circle">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <div class="step-number">3</div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title"><i class="fas fa-industry"></i> Local Recycling Partners</h3>
+                        <p class="step-desc">We work directly with Redlands-area recycling facilities to process materials:</p>
+                        <ul class="step-list">
+                            <li><strong>Redlands Recycling Center</strong> for paper, cardboard, and plastics</li>
+                            <li><strong>Inland Empire Metal Recycling</strong> for all ferrous and non-ferrous metals</li>
+                            <li><strong>E-Waste Collective</strong> for electronics and computer components</li>
+                            <li><strong>Green Wood Recycling</strong> for lumber and yard waste processing</li>
+                        </ul>
+                        <p class="step-desc">These partnerships ensure materials are properly processed according to California regulations.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon-container">
+                        <div class="step-icon-circle">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <div class="step-number">4</div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title"><i class="fas fa-people-carry"></i> Community Donations</h3>
+                        <p class="step-desc">Gently used items are donated to local Redlands charities and organizations:</p>
+                        <ul class="step-list">
+                            <li><strong>Family Service Association of Redlands</strong> - Furniture and household goods</li>
+                            <li><strong>Redlands Salvation Army</strong> - Clothing and small appliances</li>
+                            <li><strong>Goodwill of Southern California</strong> - Various reusable items</li>
+                            <li><strong>Redlands Homeless Shelter</strong> - Essential items for those in need</li>
+                            <li><strong>Habitat for Humanity ReStore</strong> - Building materials and furniture</li>
+                        </ul>
+                        <p class="step-desc">We provide donation receipts for tax deduction purposes upon request.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon-container">
+                        <div class="step-icon-circle">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="step-number">5</div>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-title"><i class="fas fa-file-alt"></i> Transparency & Reporting</h3>
+                        <p class="step-desc">We provide detailed documentation of our environmental impact:</p>
+                        <ul class="step-list">
+                            <li><strong>Weight tickets</strong> from recycling facilities</li>
+                            <li><strong>Donation receipts</strong> from charity partners</li>
+                            <li><strong>Landfill diversion percentage</strong> for your specific project</li>
+                            <li><strong>Environmental impact report</strong> showing CO2 savings</li>
+                        </ul>
+                        <p class="step-desc">This transparency builds trust and shows exactly how your junk removal made a difference.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="partners-section" id="our-partners">
+            <div class="section-header">
+                <h2 class="section-title">Our Local Redlands Partners</h2>
+                <p class="section-subtitle">Building a greener community through strategic partnerships with local recycling facilities and charitable organizations.</p>
+            </div>
+            
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3 class="partner-name">Redlands Recycling Center</h3>
+                    <p class="partner-desc">Our primary partner for paper, cardboard, glass, and plastic recycling. Certified by the California Department of Resources Recycling and Recovery (CalRecycle).</p>
+                </div>
+                
+                <div class="partner-card">
+                    <div class="partner-icon">
+                        <i class="fas fa-magnet"></i>
+                    </div>
+                    <h3 class="partner-name">Inland Empire Metal Recycling</h3>
+                    <p class="partner-desc">Specializes in processing ferrous and non-ferrous metals. All metals are sorted and prepared for reuse in manufacturing, keeping them out of landfills.</p>
+                </div>
+                
+                <div class="partner-card">
+                    <div class="partner-icon">
+                        <i class="fas fa-laptop-house"></i>
+                    </div>
+                    <h3 class="partner-name">E-Waste Collective</h3>
+                    <p class="partner-desc">Certified electronic waste processor that safely disassembles electronics, recovers valuable materials, and properly disposes of hazardous components.</p>
+                </div>
+                
+                <div class="partner-card">
+                    <div class="partner-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="partner-name">Family Service Association of Redlands</h3>
+                    <p class="partner-desc">Local charity providing furniture and household goods to families in need throughout the Redlands community. Our primary donation partner since 2018.</p>
+                </div>
+                
+                <div class="partner-card">
+                    <div class="partner-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3 class="partner-name">Redlands Salvation Army</h3>
+                    <p class="partner-desc">Accepts clothing, small appliances, and household items. Proceeds from sales support their adult rehabilitation programs in the Inland Empire.</p>
+                </div>
+                
+                <div class="partner-card">
+                    <div class="partner-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="partner-name">Habitat for Humanity ReStore</h3>
+                    <p class="partner-desc">Accepts building materials, furniture, and appliances. Sales support Habitat's mission to build affordable housing in San Bernardino County.</p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="impact-box">
+            <div class="impact-icon">
+                <i class="fas fa-earth-americas"></i>
+            </div>
+            <h3 class="impact-title">Our Environmental Impact in Redlands</h3>
+            <p class="impact-text">
+                Since implementing our eco-friendly process, Triple G has diverted over <strong>85%</strong> of collected materials from Redlands-area landfills. We're not just removing junk—we're actively contributing to a circular economy where materials are reused, recycled, and repurposed within our local community.
+            </p>
+            <p class="impact-text">
+                Our commitment extends beyond compliance. We continuously seek new partnerships and technologies to improve our landfill diversion rate and support Redlands' sustainability goals. When you choose Triple G, you're supporting local jobs, charities, and environmental stewardship.
+            </p>
+            
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Landfill Diversion Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6+</div>
+                    <div class="stat-label">Local Charity Partners</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Recycling Facilities</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Families Helped</div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-links">
+                <a href="https://triplegredlands.com/" target="_blank" class="footer-link">
+                    <i class="fas fa-trash-alt"></i> Junk Removal near me
+                </a>
+                <a href="https://maps.app.goo.gl/BR8qGLyRwrhJPBvN6" target="_blank" class="footer-link">
+                    <i class="fas fa-map-marker-alt"></i> GBM Location
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1sGn64iRSjO4FnW6HeDcc5GSxuKp9IaqhFkEV1V9Jtow/edit?usp=sharing" target="_blank" class="footer-link">
+                    <i class="fas fa-recycle"></i> Request Indexing
+                </a>
+            </div>
+            <p style="margin-bottom: 15px;">Triple G Eco-Friendly Junk Removal &copy; 2023 | Serving Redlands and the Inland Empire</p>
+            <p style="font-size: 0.9rem; opacity: 0.7;">Our process details and partnerships are accurate as of publication. We continuously update our practices to improve environmental outcomes and community impact.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Create animated leaf particles
+        function createLeaves() {
+            const leafContainer = document.createElement('div');
+            leafContainer.className = 'leaf-container';
+            leafContainer.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                z-index: -1;
+            `;
+            document.body.appendChild(leafContainer);
+            
+            const colors = ['#27AE60', '#2ECC71', '#D4AF37', '#F4D03F'];
+            
+            for (let i = 0; i < 20; i++) {
+                const leaf = document.createElement('div');
+                leaf.className = 'leaf';
+                
+                // Random properties
+                const size = Math.random() * 20 + 10;
+                const posX = Math.random() * 100;
+                const startY = Math.random() * -50;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const delay = Math.random() * 20;
+                const duration = Math.random() * 30 + 25;
+                const rotate = Math.random() * 360;
+                const sway = Math.random() * 100 - 50;
+                
+                leaf.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${posX}vw;
+                    top: ${startY}vh;
+                    background-color: ${color};
+                    opacity: ${Math.random() * 0.2 + 0.05};
+                    animation: floatLeaf ${duration}s linear ${delay}s infinite;
+                    transform: rotate(${rotate}deg);
+                `;
+                
+                leafContainer.appendChild(leaf);
+            }
+            
+            // Add CSS for leaf animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes floatLeaf {
+                    0% { 
+                        transform: translate(0, 0) rotate(0deg); 
+                        opacity: 0.1;
+                    }
+                    10% { 
+                        transform: translate(${Math.random() * 20 - 10}px, 10vh) rotate(36deg); 
+                        opacity: 0.3;
+                    }
+                    20% { 
+                        transform: translate(${Math.random() * 40 - 20}px, 20vh) rotate(72deg); 
+                        opacity: 0.2;
+                    }
+                    30% { 
+                        transform: translate(${Math.random() * 60 - 30}px, 30vh) rotate(108deg); 
+                        opacity: 0.4;
+                    }
+                    40% { 
+                        transform: translate(${Math.random() * 80 - 40}px, 40vh) rotate(144deg); 
+                        opacity: 0.3;
+                    }
+                    50% { 
+                        transform: translate(${Math.random() * 100 - 50}px, 50vh) rotate(180deg); 
+                        opacity: 0.5;
+                    }
+                    60% { 
+                        transform: translate(${Math.random() * 80 - 40}px, 60vh) rotate(216deg); 
+                        opacity: 0.4;
+                    }
+                    70% { 
+                        transform: translate(${Math.random() * 60 - 30}px, 70vh) rotate(252deg); 
+                        opacity: 0.3;
+                    }
+                    80% { 
+                        transform: translate(${Math.random() * 40 - 20}px, 80vh) rotate(288deg); 
+                        opacity: 0.2;
+                    }
+                    90% { 
+                        transform: translate(${Math.random() * 20 - 10}px, 90vh) rotate(324deg); 
+                        opacity: 0.1;
+                    }
+                    100% { 
+                        transform: translate(0, 100vh) rotate(360deg); 
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // Scroll animation for sections
+        function animateOnScroll() {
+            const sections = document.querySelectorAll('.process-section, .partners-section, .impact-box');
+            const windowHeight = window.innerHeight;
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('fade-in');
+                }
+            });
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            createLeaves();
+            animateOnScroll();
+            
+            // Initial animation for first section
+            document.getElementById('our-process').classList.add('fade-in');
+            
+            // Add click effects to service cards
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = 'translateY(-15px) scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = 'translateY(-15px) scale(1.03)';
+                    }, 150);
+                });
+            });
+            
+            // Add hover effect to partner cards
+            document.querySelectorAll('.partner-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.zIndex = '1';
+                });
+            });
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>
